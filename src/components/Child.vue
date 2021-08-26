@@ -3,7 +3,7 @@
         
         <p>儿子：</p>
         {{money}}
-        <button @click="$emit('useMoney',money-100)"><span>花钱</span></button>
+        <button @click="$emit('update:money',money-100)"><span>花钱</span></button>
     </div>
 </template>
 <script>

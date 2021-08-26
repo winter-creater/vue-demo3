@@ -4,7 +4,7 @@
     <p>父亲：</p>
     App.vue 我现在有 {{total}}
     <hr>
-    <Child :money="total" v-on:useMoney="total=$event"/>
+    <Child :money="total" v-on:update:money="total=$event"/>
     <!-- $event获取子组件的$emit后面的参数 -->
      </div>
 </template>
