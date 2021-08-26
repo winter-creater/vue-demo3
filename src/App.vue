@@ -5,6 +5,7 @@
     App.vue 我现在有 {{total}}
     <hr>
     <Child :money.sync="total"/>
+    <!-- .sync修饰符 -->
     <!-- :money="total" v-on:update:money="total=$event"
     等价于 :money.sync="total"
      -->
