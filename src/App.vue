@@ -1,8 +1,11 @@
 <template>
   <div id="app">
+    <p>儿子向父亲要零花钱例子</p>
+    <p>父亲：</p>
     App.vue 我现在有 {{total}}
     <hr>
-    <Child/>
+    <Child :money="total" v-on:useMoney="total=$event"/>
+    <!-- $event获取子组件的$emit后面的参数 -->
      </div>
 </template>
 
