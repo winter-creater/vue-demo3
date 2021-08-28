@@ -2,21 +2,14 @@
     <div>Child1.vue</div>
 </template>
 <script>
+import log from '../mixins/log.js'
 export default {
-data(){
-    return{
-        name:"Child1",
-        time:undefined
-    }
-},
-created(){
-    this.time=new Date();
-    console.log(`${this.name}出生了`);
-},
-beforeDestroy(){
-    const now=new Date();
+   data(){
+       return{
+           name:"Child1"
+       }
+   },
+   mixins:[log]
 
-    console.log(`${this.name}死亡了，共生存了${now-this.time}ms`);
-}
 }
 </script>
