@@ -15,8 +15,16 @@ Vue.directive('x', {
 })
 
 new Vue({
+  directives: {
+    'on2': {
+      inserted(el, info) {
+        // console.log(info.arg)
+        el.addEventListener(info.arg, info.value)
+      }
+    }
+  },
   template: `
-<button v-on:click="hi">点我</button>
+<button v-on2:click="hi">点我</button>
 `,
   methods: {
     hi() {
