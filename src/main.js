@@ -1,10 +1,11 @@
 // 非完整版本
-// import Vue from 'vue'
+import Vue from 'vue'
 // import App from './App.vue'
+import Mixins from './components/Mixins.vue'
+
 // 完整版本bootCdn引入
+// const Vue = window.Vue
 
-
-const Vue = window.Vue
 Vue.config.productionTip = false
 
 // 全局指令v-x，可以在任何组件使用v-x
@@ -26,15 +27,15 @@ new Vue({
       },
     }
   },
-  template: `
-<button v-on2:click="hi">点我</button>
-`,
+  //   template: `
+  // <button v-on2:click="hi">点我</button>
+  // `,
   methods: {
     hi() {
       console.log('hi');
     }
 
-  }
-  // render: h => h(App),
+  },
+  render: h => h(Mixins),
 
 }).$mount('#app')
