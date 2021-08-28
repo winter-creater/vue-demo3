@@ -20,7 +20,10 @@ new Vue({
       inserted(el, info) {
         // console.log(info.arg)
         el.addEventListener(info.arg, info.value)
-      }
+      },
+      unbind(el, info) {
+        el.removeEventListener(info.arg, info.value)
+      },
     }
   },
   template: `
