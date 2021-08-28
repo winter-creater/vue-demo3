@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p>儿子向父亲要零花钱例子</p>
+    <p v-x>儿子向父亲要零花钱例子</p>
     <p>父亲：</p>
     App.vue 我现在有 {{total}}
     <hr>

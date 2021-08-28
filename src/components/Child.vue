@@ -1,7 +1,7 @@
 <template>
     <div class="child">
         
-        <p>儿子：</p>
+        <p v-x>儿子：</p>
         {{money}}
         <button @click="$emit('update:money',money-100)"><span>花钱</span></button>
     </div>
