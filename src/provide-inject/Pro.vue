@@ -1,5 +1,5 @@
 <template>
-<div :class="`app theme-${themeName}`">
+<div :class="`app theme-${themeName} fontSize-${fontSizeName}`">
     <Child1/>
     <button>x</button>
     <Child2/>
@@ -22,15 +22,16 @@ import Child5 from '../components/Child5.vue'
 export default{
     provide(){
         return{
-           themeName: this.themeName ,//复制
-           changeTheme:this.changeTheme
+           themeName: this.themeName ,
+           changeTheme:this.changeTheme,
+           changeFontSize:this.changeFontSize
         }
     },
     name:"Pro",
     data(){
         return{
             themeName:"blue",//red
-            fontSize:"normal" //big 、 small
+            fontSizeName:"normal" //big 、 small
         }
     },
     methods:{
@@ -39,6 +40,11 @@ export default{
                 this.themeName='red'
             }else{
                 this.themeName='blue'
+            }
+        },
+        changeFontSize(name){
+            if(['normal','big','small'].indexOf(name)>=0){
+                this.fontSizeName=name
             }
         }
     },
@@ -74,6 +80,18 @@ Child5
 }
 .app.theme-red{
     color: darkred;
+}
+.app.fontSize-normal{
+    font-size: 16px;
+}
+.app.fontSize-big{
+    font-size: 24px;
+}
+.app.fontSize-small{
+    font-size: 8px;
+}
+.app button{
+    font-size: inherit;
 }
 
 </style>
