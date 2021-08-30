@@ -1,7 +1,8 @@
 // 非完整版本
 import Vue from 'vue'
 // import App from './App.vue'
-import Mixins from './components/Mixins.vue'
+// import Mixins from './components/Mixins.vue'
+import Pro from './provide-inject/Pro.vue'
 
 // 完整版本bootCdn引入
 // const Vue = window.Vue
@@ -36,6 +37,7 @@ new Vue({
     }
 
   },
-  render: h => h(Mixins),
+  // render: h => h(Mixins),
+  render: h => h(Pro),
 
 }).$mount('#app')
